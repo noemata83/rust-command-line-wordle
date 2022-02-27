@@ -90,6 +90,7 @@ fn evaluate_guess(word: &String, guess: &String, used_invalid_letters: &mut Vec<
         } else if target_characters.contains(&letter) && letter != target_letter {
             let result_letter_string: String = letter.to_uppercase().to_string();
             print!("{} ", result_letter_string.yellow().bold());
+            is_correct = false;
         } else {
             let result_letter_string: String = letter.to_uppercase().to_string();
             print!("{} ", result_letter_string.green().bold());
